@@ -8,7 +8,7 @@ defmodule Weatherwitch do
         send(sender_pid, {:ok, temperature_of(location)})
 
       _ ->
-        IO.puts("don't know how to process this message")
+        Logger.error("don't know how to process this message")
     end
 
     loop()
